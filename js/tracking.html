@@ -1,0 +1,114 @@
+<!--
+  =====================================================
+  TRACKING - Tablao Flamenco Las Setas
+  =====================================================
+  
+  ⚠️ IMPORTANTE - GDPR:
+  Este script debe cargarse SOLO cuando el usuario
+  haya dado su consentimiento para cookies de marketing/analytics.
+  
+  Opciones de implementación:
+  
+  1. CON CMP (Complianz, CookieYes, etc.):
+     - Configurar el CMP para cargar este script
+       solo en categoría "analytics" o "marketing"
+  
+  2. CON Google Consent Mode v2:
+     - El script se carga pero respeta el estado
+       de consentimiento automáticamente
+  
+  3. MANUAL (no recomendado):
+     - Cargar condicionalmente según cookie de consent
+  
+  =====================================================
+-->
+
+<!-- Google Analytics 4 (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  
+  // Consent Mode v2 - Estado por defecto (denegar hasta consentimiento)
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': 500
+  });
+  
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', {
+    'anonymize_ip': true,
+    'cookie_flags': 'SameSite=None;Secure'
+  });
+</script>
+
+<!-- Facebook Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  
+  // Inicializar con consent mode
+  fbq('consent', 'revoke');
+  fbq('init', 'XXXXXXXXXXXXXXX');
+  fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+       src="https://www.facebook.net/tr?id=XXXXXXXXXXXXXXX&ev=PageView&noscript=1"/>
+</noscript>
+
+<!--
+  =====================================================
+  EVENTO: Actualizar consentimiento
+  =====================================================
+  
+  Cuando el usuario acepte cookies, tu CMP debe ejecutar:
+  
+  // Google
+  gtag('consent', 'update', {
+    'analytics_storage': 'granted',
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted'
+  });
+  
+  // Facebook
+  fbq('consent', 'grant');
+  
+  =====================================================
+-->
+
+<!--
+  =====================================================
+  EVENTOS PERSONALIZADOS (para tracking de conversiones)
+  =====================================================
+  
+  Estos eventos se disparan desde footer-scripts.html
+  cuando el usuario hace clic en botones de precio.
+  
+  Ejemplo de uso:
+  
+  // En el botón de reserva
+  gtag('event', 'begin_checkout', {
+    'event_category': 'Reservas',
+    'event_label': 'VIP',
+    'value': 68
+  });
+  
+  fbq('track', 'InitiateCheckout', {
+    content_name: 'Entrada VIP',
+    value: 68,
+    currency: 'EUR'
+  });
+  
+  =====================================================
+-->
