@@ -1,0 +1,135 @@
+<!-- Script Turitop con defer -->
+<script id="js-turitop" 
+        src="https://app.turitop.com/js/load-turitop.min.js" 
+        data-company="T1263" 
+        data-buttoncolor="#E3AD43" 
+        data-afftag="ttafid"
+        defer>
+</script>
+<script>
+/* Tablao Flamenco Las Setas - JavaScript completo */
+(function() {
+  'use strict';
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+  
+  function init() {
+    setupSmoothScroll();
+    setupStickyBehavior();
+  }
+  
+  function setupSmoothScroll() {
+    function getHeaderHeight() {
+      var header = document.querySelector('.site-header') || 
+                   document.querySelector('header.site-header') || 
+                   document.querySelector('[role="banner"]') ||
+                   document.querySelector('header');
+      return header ? header.offsetHeight + 20 : 100;
+    }
+    
+    document.querySelectorAll('a[href*="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        var href = this.getAttribute('href');
+        if (!href || href === '#') return;
+        
+        var targetId = href.split('#')[1];
+        if (!targetId) return;
+        
+        var target = document.getElementById(targetId);
+        if (!target) return;
+        
+        e.preventDefault();
+        
+        var offset = getHeaderHeight();
+        var targetPos = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        
+        window.scrollTo({
+          top: targetPos,
+          behavior: 'smooth'
+        });
+        
+        setTimeout(function() {
+          target.focus({preventScroll: true});
+        }, 500);
+      });
+    });
+  }
+  
+  function setupStickyBehavior() {
+    var sticky = document.getElementById('tfs-sticky-cta');
+    var bookingSection = document.getElementById('tfs-booking');
+    
+    if (!sticky || !bookingSection) return;
+    
+    if (!window.IntersectionObserver) return;
+    
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (!entry.isIntersecting && window.scrollY > 500) {
+          sticky.classList.add('visible');
+          if (window.innerWidth <= 768) {
+            document.body.classList.add('tfs-has-sticky-active');
+          }
+        } else if (entry.isIntersecting) {
+          sticky.classList.remove('visible');
+          document.body.classList.remove('tfs-has-sticky-active');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    observer.observe(bookingSection);
+  }
+  
+  window.scrollToWidget = function() {
+    var widget = document.getElementById('tfs-widget') || 
+                 document.getElementById('tfs-booking');
+    
+    if (!widget) return;
+    
+    var header = document.querySelector('.site-header') || 
+                 document.querySelector('header');
+    var offset = header ? header.offsetHeight + 20 : 100;
+    var pos = widget.getBoundingClientRect().top + window.pageYOffset - offset;
+    
+    window.scrollTo({
+      top: pos,
+      behavior: 'smooth'
+    });
+    
+    if (window.gtag) {
+      gtag('event', 'scroll_to_booking', {
+        'event_category': 'Navigation'
+      });
+    }
+  };
+  
+  document.querySelectorAll('[data-event]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      var eventName = this.getAttribute('data-event');
+      var tier = this.getAttribute('data-tier');
+      var price = this.getAttribute('data-price');
+      
+      if (window.gtag) {
+        gtag('event', eventName, {
+          'event_category': 'Engagement',
+          'event_label': tier || 'unknown',
+          'value': parseFloat(price) || 0
+        });
+      }
+      
+      if (window.fbq) {
+        fbq('track', 'InitiateCheckout', {
+          content_name: tier || 'unknown',
+          value: parseFloat(price) || 0,
+          currency: 'EUR'
+        });
+      }
+    });
+  });
+  
+})();
+</script>
