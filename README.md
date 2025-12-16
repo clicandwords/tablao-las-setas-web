@@ -1,198 +1,184 @@
-# tablao-las-setas-web
-Código CSS y HTML para la web del Tablao Flamenco Las Setas
+# Tablao Flamenco Las Setas — Web Assets
 
+Repositorio de **código personalizado** para la web de Tablao Flamenco Las Setas (WordPress + Elementor Pro).
 
-# Tablao Flamenco Las Setas - Web Assets
-
-Repositorio de código personalizado para la web **tablaoflamencolassetas.com** (WordPress + Elementor Pro).
-
-> **Última actualización:** Diciembre 2024  
 > **Desarrollador:** @clicandwords  
-> **Estado:** En desarrollo (entorno test)
+> **Estado:** En desarrollo (entorno test)  
+> **Versión actual:** v3.0
 
 ---
 
-## 📁 Estructura del repositorio
+## 📁 Estructura
 
 ```
 tablao-las-setas-web/
 ├── css/
 │   └── tablao-las-setas-css-v3.css    # CSS global (2244 líneas)
 ├── js/
-│   └── footer-scripts.html             # Turitop + JS personalizado
+│   ├── footer-scripts.html             # Turitop + UX (smooth scroll, sticky CTA)
+│   └── tracking.html                    # gtag + fbq (separado para GDPR)
 ├── schema/
-│   └── head-schema.html                # Schema markup SEO/IA
-├── sections/                            # Secciones HTML reutilizables
-│   └── (próximamente)
+│   └── head-schema.html                 # Schema markup SEO/IA
+├── sections/                            # HTML reutilizable (próximamente)
 └── README.md
 ```
 
 ---
 
-## 🎨 Paleta de colores
+## 🎨 Diseño
 
+### Colores
 | Nombre | Hex | Uso |
 |--------|-----|-----|
 | Rojo Pantone 200C | `#C8102E` | Fondo principal, CTAs |
 | Negro cálido | `#1A1512` | Textos, footer |
 | Oro harvest | `#E3AD43` | Acentos, botones hover |
-| Crema cálido | `#F9E5DA` | Texto sobre fondos oscuros |
-| Off-white | `#FCE2BF` | Texto principal |
+| Crema | `#F9E5DA` | Texto sobre fondos oscuros |
 
----
-
-## 🔤 Tipografías
-
+### Tipografías
 | Uso | Fuente |
 |-----|--------|
 | H1 Hero | Geoparody |
 | H2, H3 | Bright Almond |
-| Subtítulos especiales | Fifties Movies |
-| Decorativo | Flowers Kingdom |
-| Body text | Work Sans / Lato |
+| Body | Work Sans |
 | Botones | Montserrat |
-
----
-
-## 📄 Páginas de la web (15)
-
-### Menú principal
-
-| # | Página | Slug | Estado | Notas |
-|---|--------|------|--------|-------|
-| 1 | **Home** | `/` | ✅ Activa | Hero + Turitop + Secciones |
-| 2 | **Espectáculo Flamenco** | `/espectaculo-flamenco-sevilla/` | ✅ Activa | Página padre con desplegable |
-| 2a | → Elenco | `/elenco/` | ✅ Activa | Grid artistas + modal popup |
-| 2b | → Nosotros | `/nosotros/` | ✅ Activa | Historia + Sandra Guerrero |
-| 3 | **Entradas y Horarios** | `/entradas-horarios/` | ✅ Activa | Widget Turitop embebido |
-| 4 | **Ubicación** | `/ubicacion/` | ✅ Activa | Mapa + instrucciones |
-| 5 | **Programación** | `/programacion/` | ✅ Activa | MEC shortcode 3057 (acordeón) |
-| 6 | **Carta** | `/carta/` | ✅ Activa | Cócteles + vinos Jerez + tapas |
-| 7 | **Contacto** | `/contacto/` | ✅ Activa | Formulario + WhatsApp |
-| 8 | **FAQs** | `/faqs/` | ✅ Activa | Preguntas frecuentes |
-| 9 | **Blog** | `/blog/` | ✅ Activa | Archivo + 1 post |
-
-### Páginas legales (footer)
-
-| # | Página | Slug | Estado |
-|---|--------|------|--------|
-| 10 | Aviso Legal | `/aviso-legal/` | ✅ |
-| 11 | Política Privacidad | `/politica-privacidad/` | ✅ |
-| 12 | Política Cookies | `/politica-cookies/` | ✅ |
-| 13 | Condiciones Cancelación | `/condiciones-cancelacion/` | ✅ |
-| 14 | Condiciones Uso Web | `/condiciones-uso-web/` | ✅ |
-
----
-
-## 📦 Archivos del repositorio
-
-### 1. CSS Global (`/css/tablao-las-setas-css-v3.css`)
-
-**Líneas:** ~2244  
-**Implementación:** Pegarlo en **Apariencia → Personalizar → CSS adicional** o plugin WPCode
-
-**Secciones incluidas:**
-- Variables CSS (`:root`)
-- Header sticky (`tfs-header-main`, `tfs-top-bar`)
-- Footer completo
-- Formularios
-- TranslatePress estilos
-- Blog y posts
-- Responsive breakpoints
-- Home 2025 secciones
-
-### 2. Schema Markup (`/schema/head-schema.html`)
-
-**Implementación:** Plugin **Insert Headers and Footers (WPCode)** → Sección Header
-
-**Contenido:**
-- `LocalBusiness` + `TouristAttraction` + `PerformingArtsTheater`
-- `EventSeries` con 3 subEvents (18:00, 19:45, 21:30)
-- `FAQPage` con 15 preguntas optimizadas para IA
-- Preconnects y preloads optimizados
-
-**Datos clave:**
-| Campo | Valor |
-|-------|-------|
-| Rating | 4.9/5 |
-| Reviews | 13,000 (Google 11K + GetYourGuide 2K) |
-| Precios | 28€ - 68€ (4 tipos entrada) |
-| Duración | 75 minutos |
-| Artistas | 8 profesionales |
-
-### 3. Footer Scripts (`/js/footer-scripts.html`)
-
-**Implementación:** Plugin **WPCode** → Sección Footer
-
-**Contenido:**
-- Script Turitop (empresa T1263, color #E3AD43)
-- Smooth scroll para enlaces internos
-- Sticky CTA con IntersectionObserver
-- Event tracking (gtag + fbq)
-
----
-
-## 🔌 Plugins requeridos
-
-| Plugin | Uso | Config clave |
-|--------|-----|--------------|
-| **Elementor Pro** | Page builder | - |
-| **Modern Events Calendar (MEC)** | Programación | Shortcode 3057, skin acordeón |
-| **Turitop** | Reservas | Empresa T1263 |
-| **TranslatePress** | Multiidioma | ES, EN, (DE, FR próx.) |
-| **Trustindex** | Reviews Google | Widget embebido |
-| **Click to Chat** | WhatsApp | +34 684 776 981 |
-| **WPCode** | Headers/Footers | Schema + Scripts |
-
----
-
-## 📋 Implementación paso a paso
-
-### CSS Global
-1. Ir a **Apariencia → Personalizar → CSS adicional**
-2. Pegar contenido de `/css/tablao-las-setas-css-v3.css`
-3. Publicar
-
-### Schema Markup
-1. Instalar plugin **WPCode** (Insert Headers and Footers)
-2. Ir a **Code Snippets → Header & Footer**
-3. En sección **Header**, pegar contenido de `/schema/head-schema.html`
-4. Guardar
-
-### Footer Scripts
-1. En mismo plugin WPCode
-2. En sección **Footer**, pegar contenido de `/js/footer-scripts.html`
-3. Guardar
-
-### Validación
-1. Abrir [Google Rich Results Test](https://search.google.com/test/rich-results)
-2. Introducir URL de la web
-3. Verificar que detecta LocalBusiness, Event y FAQ
-
----
-
-## ⚠️ Notas importantes
-
-### URLs de desarrollo
-Todos los archivos usan `test.tablaoflamencolassetas.com`. 
-
-**Antes de pasar a producción:**
-- Buscar y reemplazar `test.tablaoflamencolassetas.com` → `tablaoflamencolassetas.com`
 
 ### Clases CSS principales
 | Elemento | Clase |
 |----------|-------|
-| Header principal | `.tfs-header-main` |
+| Header | `.tfs-header-main` |
 | Top bar | `.tfs-top-bar` |
-| Contenedor hero | `.tfs-hero` |
-| Cards artistas | `.tfs-artist-card` |
 | Botón CTA | `.tfs-btn-primary` |
+| Cards artistas | `.tfs-artist-card` |
 
-### MEC (Calendario)
-- **Shortcode activo:** `[MEC id="3057"]`
-- **Skin:** Acordeón
-- **Campos personalizados:** Baile, Cante, Guitarra, Percusión
-- **Pendiente:** Ajustar layout del acordeón desplegado
+---
+
+## 📄 Páginas (15)
+
+### Menú principal
+| Página | Slug | Notas |
+|--------|------|-------|
+| Home | `/` | Hero + Turitop + Secciones |
+| Espectáculo Flamenco | `/espectaculo-flamenco-sevilla/` | Página padre |
+| → Elenco | `/elenco/` | Grid artistas + modal |
+| → Nosotros | `/nosotros/` | Historia + Sandra Guerrero |
+| Entradas y Horarios | `/entradas-horarios/` | Widget Turitop |
+| Ubicación | `/ubicacion/` | Mapa + instrucciones |
+| Programación | `/programacion/` | MEC shortcode 3057 |
+| Carta | `/carta/` | Cócteles + vinos + tapas |
+| Contacto | `/contacto/` | Formulario + WhatsApp |
+| FAQs | `/faqs/` | Preguntas frecuentes |
+| Blog | `/blog/` | Archivo + posts |
+
+### Legales (footer)
+Aviso Legal · Política Privacidad · Política Cookies · Condiciones Cancelación · Condiciones Uso Web
+
+---
+
+## ⚡ Implementación rápida
+
+### 1. CSS global
+```
+WordPress → Apariencia → Personalizar → CSS adicional
+Pegar: css/tablao-las-setas-css-v3.css
+```
+
+### 2. Schema (en HEAD)
+```
+WPCode → Header & Footer → Header
+Pegar: schema/head-schema.html
+```
+
+### 3. Scripts (en FOOTER)
+```
+WPCode → Header & Footer → Footer
+Pegar: js/footer-scripts.html
+
+⚠️ Si usas banner de cookies/consent:
+Pegar tracking.html SOLO cuando haya consentimiento
+(o integrarlo con tu CMP)
+```
+
+---
+
+## 📦 Detalle de archivos
+
+### CSS (`css/tablao-las-setas-css-v3.css`)
+- Variables `:root`
+- Header / Top bar / Footer
+- Formularios
+- TranslatePress
+- Blog
+- Responsive
+- Secciones Home
+
+### Schema (`schema/head-schema.html`)
+| Schema | Contenido |
+|--------|-----------|
+| LocalBusiness | Datos negocio, coordenadas, horarios |
+| EventSeries | 3 pases diarios con precios |
+| FAQPage | 15 preguntas optimizadas para IA |
+
+**Datos incluidos (verificar periódicamente):**
+| Dato | Valor | Fuente | Última verificación |
+|------|-------|--------|---------------------|
+| Rating | 4.9/5 | Google + GYG | Dic 2024 |
+| Reviews | ~13,000 | Google 11K + GYG 2K | Dic 2024 |
+
+### Scripts (`js/footer-scripts.html`)
+- Turitop (empresa T1263, color #E3AD43)
+- Smooth scroll
+- Sticky CTA (IntersectionObserver)
+
+### Tracking (`js/tracking.html`) ⚠️
+- Google Analytics (gtag)
+- Facebook Pixel (fbq)
+
+> **GDPR:** Este archivo debe cargarse SOLO con consentimiento del usuario.
+> Integrarlo con tu CMP (Complianz, CookieYes, etc.)
+
+---
+
+## 🔌 Plugins
+
+| Plugin | Uso | Config |
+|--------|-----|--------|
+| Elementor Pro | Page builder | - |
+| MEC | Programación | Shortcode 3057, skin acordeón |
+| Turitop | Reservas | Empresa T1263 |
+| TranslatePress | Multiidioma | ES, EN |
+| Trustindex | Reviews | Widget embebido |
+| Click to Chat | WhatsApp | +34 684 776 981 |
+| WPCode | Headers/Footers | Schema + Scripts |
+
+---
+
+## 🔄 Variables y Replace
+
+Antes de pasar a **producción**, buscar y reemplazar:
+
+| Buscar | Reemplazar por |
+|--------|----------------|
+| `test.tablaoflamencolassetas.com` | `tablaoflamencolassetas.com` |
+
+**Revisar también:**
+- [ ] ID shortcode MEC (actualmente 3057)
+- [ ] ID empresa Turitop (actualmente T1263)
+- [ ] IDs de analytics/píxeles si cambian
+
+---
+
+## ✅ Checklist de publicación
+
+```
+□ Replace test → prod (dominio, embeds)
+□ Schema: Rich Results Test sin errores
+□ Lighthouse móvil: LCP < 2.5s, CLS < 0.1
+□ Imágenes: WebP + lazy-load
+□ Tracking: eventos OK + consent configurado
+□ Responsive: 375px / 768px / 1024px / 1440px
+□ Formularios: labels + validación
+```
 
 ---
 
@@ -202,46 +188,45 @@ Todos los archivos usan `test.tablaoflamencolassetas.com`.
 |-------|-------|
 | **Nombre** | Tablao Flamenco Las Setas |
 | **Dirección** | Plaza de la Encarnación 38, 41003 Sevilla |
-| **Teléfono/WhatsApp** | +34 684 776 981 |
+| **Tel/WhatsApp** | +34 684 776 981 |
 | **Email** | reservas@tablaoflamencolassetas.com |
-| **Horarios shows** | 18:00 · 19:45 · 21:30 (+ 16:30 y 23:15 en temporada alta) |
-| **Duración** | 75 minutos (con descanso 5-10 min) |
+| **Shows** | 18:00 · 19:45 · 21:30 (+16:30 y 23:15 temporada alta) |
+| **Duración** | 75 min (descanso 5-10 min) |
 | **Aforo** | 140 plazas |
-| **Directora artística** | Sandra Guerrero "La Negra" |
+| **Directora** | Sandra Guerrero "La Negra" |
 
-### Precios entradas
-| Tipo | Precio | Incluye |
-|------|--------|---------|
-| Básica | 28€ | Solo show, asientos laterales |
-| General | 38€ | Show + cóctel/bebida, laterales preferentes |
-| Premium | 50€ | Show + bebida + tapa gourmet, vista frontal |
-| VIP | 68€ | Show + 2 bebidas + 2 tapas, primera fila |
+### Precios
+| Tipo | € | Incluye |
+|------|---|---------|
+| Básica | 28 | Solo show, laterales |
+| General | 38 | Show + cóctel, laterales preferentes |
+| Premium | 50 | Show + bebida + tapa, vista frontal |
+| VIP | 68 | Show + 2 bebidas + 2 tapas, 1ª fila |
 
 ---
 
 ## 📝 Changelog
 
-### v3.0 (Diciembre 2024)
-- ✅ CSS limpio y organizado (eliminado código muerto)
-- ✅ Schema markup completo (LocalBusiness, EventSeries, FAQPage)
-- ✅ Footer scripts con Turitop y tracking
-- ✅ Datos verificados (precios, reviews, servicios)
+### v3.0
+- ✅ CSS organizado (2244 líneas, código muerto eliminado)
+- ✅ Schema completo (LocalBusiness, EventSeries, FAQPage)
+- ✅ Footer scripts (Turitop + UX)
+- ✅ Tracking separado (GDPR)
 
 ### Próximos pasos
-- [ ] Ajustar layout MEC acordeón desplegado
-- [ ] Añadir más idiomas (DE, FR)
+- [ ] Ajustar layout MEC acordeón
+- [ ] Añadir idiomas DE/FR
 - [ ] Optimizar imágenes WebP
-- [ ] Crear secciones HTML reutilizables
+- [ ] Crear `/sections` con módulos HTML
 
 ---
 
-## 🔗 Enlaces útiles
+## 🔗 Enlaces
 
-- **Web test:** https://test.tablaoflamencolassetas.com
-- **Web producción:** https://tablaoflamencolassetas.com
-- **Google Rich Results Test:** https://search.google.com/test/rich-results
-- **Schema Validator:** https://validator.schema.org/
+- [Google Rich Results Test](https://search.google.com/test/rich-results)
+- [Schema Validator](https://validator.schema.org/)
+- [PageSpeed Insights](https://pagespeed.web.dev/)
 
 ---
 
-*Repositorio mantenido por @clicandwords para Tablao Flamenco Las Setas*
+*Repositorio mantenido por @clicandwords*
