@@ -1,0 +1,464 @@
+<!-- =====================================================
+     TABLAO FLAMENCO LAS SETAS - CÓDIGO CABECERA <HEAD>
+     Versión: 2.0 FINAL - Diciembre 2025
+     
+     INSTRUCCIONES:
+     Copiar TODO este código en el <head> de WordPress:
+     - Elementor > Configuración página > Custom Code (Head)
+     - O plugin "Insert Headers and Footers"
+     
+     IMPORTANTE: Cambiar "test." por dominio final en producción
+     ===================================================== -->
+
+<!-- ==================== PRECONNECTS Y PRELOADS ==================== -->
+
+<!-- TuriTop (widget de reservas) - Conexión anticipada -->
+<link rel="preconnect" href="https://app.turitop.com" crossorigin>
+<link rel="dns-prefetch" href="https://app.turitop.com">
+
+<!-- Imagen hero - Precarga para LCP -->
+<link rel="preload" as="image" href="https://test.tablaoflamencolassetas.com/wp-content/uploads/2025/12/hero-flamenco.webp" fetchpriority="high">
+
+<!-- Google Fonts - Optimización -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Playfair Display - Carga optimizada con fallback -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap">
+</noscript>
+
+
+<!-- ==================== SCHEMA LOCALBUSINESS ==================== -->
+<!-- Información del negocio para Google y IAs -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "TouristAttraction", "PerformingArtsTheater"],
+  "@id": "https://tablaoflamencolassetas.com/#organization",
+  "name": "Tablao Flamenco Las Setas",
+  "alternateName": "Tablao Las Setas",
+  "description": "Espectáculo de flamenco en directo en Sevilla, bajo el icónico Metropol Parasol (Las Setas). 75 minutos de baile, cante y guitarra con 8 artistas profesionales. Coctelería de autor con vinos de Jerez. Dirección artística de Sandra Guerrero 'La Negra'.",
+  "url": "https://tablaoflamencolassetas.com",
+  "logo": "https://test.tablaoflamencolassetas.com/wp-content/uploads/2025/12/cropped-LOGO.png",
+  "image": [
+    "https://test.tablaoflamencolassetas.com/wp-content/uploads/2025/12/cropped-LOGO.png",
+    "https://test.tablaoflamencolassetas.com/wp-content/uploads/2025/12/hero-flamenco.webp"
+  ],
+  "telephone": "+34684776981",
+  "email": "reservas@tablaoflamencolassetas.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plaza de la Encarnación 38",
+    "addressLocality": "Sevilla",
+    "addressRegion": "Andalucía",
+    "postalCode": "41003",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 37.393024,
+    "longitude": -5.99225
+  },
+  "hasMap": "https://maps.google.com/?q=37.393024,-5.99225",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "17:45",
+      "closes": "23:00"
+    }
+  ],
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Credit Card, Debit Card, Bizum, PayPal, Apple Pay, Google Pay",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "13000",
+    "reviewCount": "13000"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "María G."
+      },
+      "datePublished": "2025-01-15",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "Una experiencia mágica. Sentimos la pasión del flamenco como nunca antes. Los artistas son increíbles y el ambiente íntimo hace que todo sea especial."
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "James T."
+      },
+      "datePublished": "2024-12-20",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "reviewBody": "The best flamenco show we've ever seen. So close to the artists, you can feel every emotion. The cocktails were amazing too!"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/tablaoflamencolassetas/",
+    "https://www.facebook.com/tablaoflamencolassetas/",
+    "https://www.tripadvisor.es/Attraction_Review-g187443-d25276011-Reviews-Tablao_Flamenco_Las_Setas-Seville_Province_of_Seville_Andalucia.html",
+    "https://www.getyourguide.es/sevilla-l48/sevilla-entrada-espectaculo-flamenco-en-tablao-las-setas-t442499/"
+  ],
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Wheelchair Accessible",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Air Conditioning",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Cocktail Bar",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Gourmet Tapas",
+      "value": true
+    }
+  ],
+  "publicAccess": true,
+  "isAccessibleForFree": false,
+  "slogan": "Pasión auténtica bajo el Metropol Parasol"
+}
+</script>
+
+
+<!-- ==================== SCHEMA EVENTSERIES ==================== -->
+<!-- Información de espectáculos para Google Events -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EventSeries",
+  "@id": "https://tablaoflamencolassetas.com/#eventseries",
+  "name": "Espectáculo Flamenco en Tablao Las Setas",
+  "description": "Espectáculo de flamenco en directo de 75 minutos con 8 artistas profesionales: bailaores, cantaores, guitarristas y percusionistas. Incluye alegrías, soleá, seguiriyas, bulerías y otros palos tradicionales. Dirección artística de Sandra Guerrero 'La Negra'.",
+  "image": "https://test.tablaoflamencolassetas.com/wp-content/uploads/2025/12/hero-flamenco.webp",
+  "url": "https://tablaoflamencolassetas.com/entradas-horarios/",
+  "startDate": "2025-01-01",
+  "endDate": "2025-12-31",
+  "eventSchedule": {
+    "@type": "Schedule",
+    "repeatFrequency": "P1D",
+    "byDay": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "scheduleTimezone": "Europe/Madrid"
+  },
+  "location": {
+    "@type": "Place",
+    "name": "Tablao Flamenco Las Setas",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plaza de la Encarnación 38",
+      "addressLocality": "Sevilla",
+      "postalCode": "41003",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 37.393024,
+      "longitude": -5.99225
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Tablao Flamenco Las Setas",
+    "url": "https://tablaoflamencolassetas.com"
+  },
+  "performer": {
+    "@type": "PerformingGroup",
+    "name": "Cuadro Flamenco de Tablao Las Setas",
+    "description": "8 artistas profesionales: bailaores, cantaores, guitarristas y percusionistas, bajo la dirección artística de Sandra Guerrero 'La Negra'"
+  },
+  "subEvent": [
+    {
+      "@type": "Event",
+      "name": "Espectáculo Flamenco - Pase 18:00h",
+      "description": "Primer pase del día. Ideal para familias. 75 minutos de flamenco puro con 8 artistas profesionales.",
+      "startDate": "2025-01-01T18:00:00+01:00",
+      "doorTime": "2025-01-01T17:45:00+01:00",
+      "duration": "PT1H15M",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Tablao Flamenco Las Setas"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "28",
+        "highPrice": "68",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2025-01-01",
+        "url": "https://tablaoflamencolassetas.com/entradas-horarios/"
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "Espectáculo Flamenco - Pase 19:45h",
+      "description": "Pase más popular. Alta demanda, reserva anticipada recomendada. 75 minutos de flamenco puro con 8 artistas profesionales.",
+      "startDate": "2025-01-01T19:45:00+01:00",
+      "doorTime": "2025-01-01T19:30:00+01:00",
+      "duration": "PT1H15M",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Tablao Flamenco Las Setas"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "28",
+        "highPrice": "68",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/LimitedAvailability",
+        "validFrom": "2025-01-01",
+        "url": "https://tablaoflamencolassetas.com/entradas-horarios/"
+      }
+    },
+    {
+      "@type": "Event",
+      "name": "Espectáculo Flamenco - Pase 21:30h",
+      "description": "Último pase. Perfecto para combinar con cena. 75 minutos de flamenco puro con 8 artistas profesionales.",
+      "startDate": "2025-01-01T21:30:00+01:00",
+      "doorTime": "2025-01-01T21:15:00+01:00",
+      "duration": "PT1H15M",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Tablao Flamenco Las Setas"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "28",
+        "highPrice": "68",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2025-01-01",
+        "url": "https://tablaoflamencolassetas.com/entradas-horarios/"
+      }
+    }
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Entrada Básica",
+      "description": "Espectáculo completo de 75 minutos. Asientos en zona lateral. No incluye bebida.",
+      "price": "28",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2025-01-01",
+      "url": "https://tablaoflamencolassetas.com/entradas-horarios/",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Entrada General",
+      "description": "Espectáculo completo de 75 minutos. Asientos laterales preferentes. Incluye 1 cóctel o bebida a elegir de nuestra carta de vinos de Jerez.",
+      "price": "38",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2025-01-01",
+      "url": "https://tablaoflamencolassetas.com/entradas-horarios/",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Entrada Premium",
+      "description": "Espectáculo completo de 75 minutos. Vista frontal al escenario. Incluye 1 bebida premium + 1 tapa gourmet a elegir.",
+      "price": "50",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2025-01-01",
+      "url": "https://tablaoflamencolassetas.com/entradas-horarios/",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1
+      }
+    },
+    {
+      "@type": "Offer",
+      "name": "Entrada VIP",
+      "description": "Espectáculo completo de 75 minutos. Primera fila garantizada, máxima proximidad a los artistas. Incluye 2 bebidas premium + 2 tapas gourmet a elegir.",
+      "price": "68",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2025-01-01",
+      "url": "https://tablaoflamencolassetas.com/entradas-horarios/",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1
+      }
+    }
+  ],
+  "typicalAgeRange": "3-",
+  "isAccessibleForFree": false,
+  "inLanguage": ["es", "en"]
+}
+</script>
+
+
+<!-- ==================== SCHEMA FAQPAGE ==================== -->
+<!-- Preguntas frecuentes optimizadas para IAs (ChatGPT, Perplexity, etc.) -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://tablaoflamencolassetas.com/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Dónde está ubicado el Tablao Flamenco Las Setas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El Tablao Flamenco Las Setas se encuentra en la planta baja del Metropol Parasol (Las Setas de Sevilla), en la Plaza de la Encarnación 38, 41003 Sevilla. Estamos en pleno centro histórico, a 10 minutos andando de la Catedral y a 17 minutos de Puerta de Jerez. IMPORTANTE: La entrada está a nivel de calle, no subas las escaleras del mirador."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto dura el espectáculo flamenco?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El espectáculo dura 75 minutos con un descanso de 5-10 minutos a mitad del show. Las puertas abren 15 minutos antes del inicio para que puedas acomodarte y, si lo deseas, pedir algo en nuestra barra de coctelería."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿A qué hora son los espectáculos de flamenco?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ofrecemos 3 pases diarios: 18:00h (ideal para familias), 19:45h (el más popular, suele agotarse primero) y 21:30h (perfecto para combinar con cena). En temporada alta se añaden pases adicionales a las 16:30h y 23:15h según demanda."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuestan las entradas al tablao flamenco?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ofrecemos 4 tipos de entrada: Básica 28€ (solo espectáculo, asientos laterales, sin bebida), General 38€ (asientos laterales preferentes + cóctel o bebida), Premium 50€ (vista frontal al escenario + bebida + tapa gourmet), VIP 68€ (primera fila garantizada + 2 bebidas + 2 tapas). Todas las entradas incluyen el espectáculo completo de 75 minutos con 8 artistas profesionales."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Pueden entrar niños al espectáculo flamenco?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, los niños son bienvenidos. Menores de 3 años entran gratis si van sentados en el regazo de un adulto. A partir de 3 años necesitan entrada. Recomendamos el pase de las 18:00h para familias con niños pequeños."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué hace único al Tablao Las Setas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Somos el único tablao del mundo ubicado bajo el Metropol Parasol, la estructura de madera más grande del mundo. Aforo íntimo de solo 140 plazas en 2 filas, garantizando proximidad real al escenario. 8 artistas profesionales incluyendo bailaores, cantaores, guitarristas y percusionistas. Dirección artística de Sandra Guerrero 'La Negra', con más de 30 años de carrera. Coctelería de autor con vinos de Jerez. Valoración de 4.9/5 en más de 13.000 opiniones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo cancelar mi entrada de flamenco?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, ofrecemos cancelación gratuita hasta 24 horas antes del espectáculo con reembolso completo del 100%. También puedes modificar la fecha o el horario sin coste adicional."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se pueden hacer fotos durante el espectáculo flamenco?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, puedes hacer fotos y vídeos durante todo el espectáculo SIN FLASH. Lo único que no está permitido es grabar el espectáculo completo. ¡Queremos que captures los mejores momentos!"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hay servicio de bar o coctelería en el tablao?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, disponemos de bar de coctelería especializado en vinos de Jerez: manzanilla, amontillado, palo cortado y Pedro Ximénez. Ofrecemos cócteles de autor creados a base de estos vinos con nombres como 'Llave de Oro', 'La Mula de Xerez', 'Dama de Noche' y 'Vientos de Barrio Alto'. También tenemos tapas gourmet ibéricas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Quiénes son los artistas del tablao flamenco?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nuestro elenco está formado por 8 artistas profesionales de primer nivel: bailaores y bailaoras, cantaores y cantaoras, guitarristas y percusionistas. El cuadro está liderado por Sandra Guerrero 'La Negra' como directora artística, con más de 30 años de carrera profesional. Entre nuestros artistas destacan nombres como Farruquito, El Yiyo, Karime Amaya, Juan de Juan, La Moneta y muchos más."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hay parking cerca del tablao flamenco?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, el Parking Plaza de la Encarnación está justo debajo de Las Setas (acceso desde Calle Imagen). Tarifa aproximada: 2€/hora. También hay parkings en Plaza del Duque y calle Laraña a 5 minutos andando."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo llegar al tablao en transporte público?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En metro: Línea 1, parada Puerta de Jerez (17 minutos andando). En autobús: Líneas 27, 32 y C5, parada Plaza de la Encarnación. A pie: 10 minutos desde la Catedral, 5 minutos desde Plaza del Duque."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El tablao es accesible para personas con movilidad reducida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, el tablao es completamente accesible. Contamos con acceso a nivel de calle (sin escalones), espacio reservado para sillas de ruedas en primera fila, y baño adaptado. Recomendamos informar al reservar para garantizar la mejor ubicación."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hay guardarropa en el tablao?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No disponemos de guardarropa. Sin embargo, en recepción podemos guardar carritos de bebé y objetos grandes puntuales. Para maletas, recomendamos dejarlas en tu alojamiento o usar las consignas de la estación de Santa Justa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué métodos de pago aceptáis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aceptamos todos los métodos de pago principales: tarjetas (Visa, Mastercard, American Express), pagos digitales (PayPal, Apple Pay, Google Pay), y Bizum para clientes españoles. También aceptamos efectivo. El pago online es 100% seguro con encriptación SSL."
+      }
+    }
+  ]
+}
+</script>
+
+
+<!-- ==================== FIN CÓDIGO CABECERA ==================== -->
