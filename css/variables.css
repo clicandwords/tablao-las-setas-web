@@ -1,0 +1,30 @@
+/* Tablao Flamenco Las Setas - Variables CSS */
+/* Última actualización: Diciembre 2025 */
+
+:root {
+  /* Colores primarios */
+  --color-primary: #C8102E;        /* Rojo Pantone 200C */
+  --color-primary-dark: #8B1A1A;   /* Burgundy profundo */
+  --color-dark: #1A1512;           /* Negro cálido */
+  
+  /* Colores secundarios (estilo 70s) */
+  --color-gold: #E3AD43;           /* Oro harvest */
+  --color-orange: #D44C1A;         /* Naranja quemado */
+  --color-cream: #F9E5DA;          /* Crema cálido */
+  
+  /* Neutros */
+  --color-offwhite: #FCE2BF;       /* Off-white textos */
+  --color-beige: #F5F0E6;          /* Beige suave */
+  
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 50px;
+  
+  /* Tipografías */
+  --font-display: 'Geoparody', serif;
+  --font-heading: 'Bright Almond', serif;
+  --font-body: 'Work Sans', sans-serif;
+  --font-button: 'Montserrat', sans-serif;
+}
